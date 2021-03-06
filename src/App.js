@@ -1,7 +1,7 @@
 import React from "react"
 
 function App() {
-  function frases() {
+  const frases = () => {
     const frases = [];
     let color;
     for(let i = 0; i < 100; i++){
