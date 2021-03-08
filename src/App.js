@@ -1,21 +1,9 @@
-import React from "react"
+import SenyoresContainer from './Containers/SenyoresContainer'
 
-function App() {
-  const frases = () => {
-    const frases = [];
-    let color;
-    for(let i = 0; i < 100; i++){
-      color = `rgb(${i + 150}, ${i - 50}, ${i - 50})`
-      frases.push(<p style={{backgroundColor: color}} key={i}>Hola buenas {i + 1}</p>);
-    }
-    return frases;
-  }
+const App = () => {
 
   return (
-    <React.Fragment>
-      <h1>Hola buenas Titulo</h1>
-      {frases()}
-    </React.Fragment>
+    <SenyoresContainer />
   );
 }
 
