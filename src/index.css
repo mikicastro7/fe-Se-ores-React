@@ -109,6 +109,10 @@ html {
   transform: rotateY(180deg);
 }
 
+.senyort-rotado {
+  transform: rotateY(180deg);
+}
+
 .senyor .avatar .inicial {
   border-radius: 50%;
   background-color: #600;

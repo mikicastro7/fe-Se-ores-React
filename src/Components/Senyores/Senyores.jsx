@@ -12,6 +12,8 @@ const Senyores = (props) => {
         foto={senyor.foto}
         estado={senyor.estado}
         twitter={senyor.twitter}
+        marcado={senyor.marcado}
+        desmarcarSenyor={props.desmarcarSenyor}
       />)}
     </>
   )

@@ -1,14 +1,10 @@
 import React from 'react'
 
-import s1 from './img/s1.jpg'
-import s2 from './img/s1.jpg'
-import s3 from './img/s1.jpg'
-
 const Senyor = (props) => {
   return (
-    <article className="senyor">
+    <article onClick={() => props.desmarcarSenyor(props.id)} className="senyor">
       <div className="avatar">
-        <img src={s1} alt={`${props.nombre} señalándote con el dedo`} />
+        <img className={props.marcado ? "senyort-rotado" : ""} src={`./s${props.id}.jpg`} W alt={`${props.nombre} señalándote con el dedo`} />
         <span className="inicial">{props.nombre[0]}</span>
       </div>
       <div className="info">
@@ -19,7 +15,7 @@ const Senyor = (props) => {
           <li><span className="etiqueta">Twitter:</span> {props.twitter}</li>
         </ul>
       </div>
-      <i className="icono fas fa-check"></i>
+      <i style={{ display: props.marcado ? "block" : "none" }} className="icono fas fa-check"></i>
     </article>
   )
 }

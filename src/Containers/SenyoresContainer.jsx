@@ -32,10 +32,31 @@ const SenyoresContainer = () => {
       marcado: true
     }]
   )
+
+  const marcarTodos = () => {
+    const newObject = senyores.map(senyor => {
+      senyor.marcado = true
+      return senyor;
+    })
+    setSeñores(newObject)
+  }
+
+  const marcaSenyorHandler = (id) => {
+    const newArray = senyores.map(senyor => {
+      if (senyor.id === id) {
+        senyor.marcado = !senyor.marcado
+        console.log(!senyor.marcado);
+      }
+      return senyor
+    })
+    setSeñores(newArray);
+  }
   return (
     <div className="contenedor">
-      <Cabecera />
-      <Senyores senyores={senyores} />
+      <Cabecera
+        marcados={senyores.filter(senyor => senyor.marcado === true).length}
+        marcarTodos={marcarTodos} />
+      <Senyores desmarcarSenyor={marcaSenyorHandler} senyores={senyores} />
     </div>
   )
 }
